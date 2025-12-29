@@ -1,0 +1,27 @@
+.page {
+  --background: #fafafa;
+  --foreground: #fff;
+
+  --text-primary: #000;
+  --text-secondary: #666;
+
+  --button-primary: #1b1b1b;
+  --button-primary-hover: #383838;
+  --button-secondary-hover: #f2f2f2;
+  --button-secondary-border: #ebebeb;
+  --button-disabled: #676767;
+
+  --main-color: #3c7fb5;
+  --secondary-color: #678cab;
+
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  
+  color: var(--text-primary);
+  min-height: 100vh;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-geist-sans);
+  background-color: var(--background);
+}
