@@ -1,0 +1,18 @@
+.listContainer {
+    display: flex;
+    flex-wrap: wrap;
+    
+    gap: 16px;
+    padding: 16px;
+    width: 60%;
+}
+
+.listContainer .sentenceButton {
+    min-width: 100px;
+    max-width: 200px;
+    flex-wrap: wrap;
+}
+
+.listContainer .sentenceButton.sentenceSelected {
+    opacity: 0.7;
+}
