@@ -1,16 +1,10 @@
-.listContainer {
-    display: flex;
-    flex-wrap: wrap;
-    
+.listContainer {    
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+
     gap: 16px;
     padding: 16px;
-    width: 60%;
-}
-
-.listContainer .sentenceButton {
-    min-width: 100px;
-    max-width: 200px;
-    flex-wrap: wrap;
+    width: 85%;
 }
 
 .listContainer .sentenceButton.sentenceSelected {
