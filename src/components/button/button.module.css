@@ -6,7 +6,8 @@
     font-size: 1rem;
     font-weight: 600;
     cursor: pointer;
-    background-color: var(--button-primary);
+    color: var(--button-primary-text);
+    background-color: var(--button-primary-background);
     border: none;
     border-radius: 6px;
 }

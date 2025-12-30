@@ -1,19 +1,20 @@
 .bingoCell {
-    border: 2px solid #000;
+    border: 2px solid black;
     padding: 16px;
     text-align: center;
     font-size: 14px;
     cursor: pointer;
+    -webkit-user-select: none;
     user-select: none;
     transition: background-color 0.3s, color 0.3s;
 }
 
 .bingoCell.filler {
-    background-color: #f0f0f0;
-    color: #888;
+    background-color: var(--background);
+    color: #3d3d3d;
     cursor: default;
 }
 .bingoCell.selected {
-    background-color: #4caf50;
-    color: #fff;
+    background-color: #44a047;
+    color: var(--button-primary-text);
 }
