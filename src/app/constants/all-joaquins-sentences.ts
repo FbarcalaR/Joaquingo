@@ -59,4 +59,5 @@ export const allJoaquinSentences: JoaquinSentence[] = [
   "un chino se comio un pangolin y por eso tuvimos el covid",
   "Silvia Arroyo",
   "Pizza con grillos",
+  "Un respeto a Isi Palazon que es el Zidane de Cieza",
 ].map((label, index) => ({ id: index + 1, label }));
