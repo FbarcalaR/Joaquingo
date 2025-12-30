@@ -57,4 +57,6 @@ export const allJoaquinSentences: JoaquinSentence[] = [
   "A mi me quieren hasta los catalanes",
   "[Nombre]-íííín, que tiene sueñíín",
   "un chino se comio un pangolin y por eso tuvimos el covid",
+  "Silvia Arroyo",
+  "Pizza con grillos",
 ].map((label, index) => ({ id: index + 1, label }));
