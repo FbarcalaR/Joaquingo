@@ -25,7 +25,6 @@ export const allJoaquinSentences: JoaquinSentence[] = [
   "ahi paraba mi Brañas",
   "el betis va a ganar la champions de aqui a 2070 (que me lo ha dicho ChatGPT)",
   "este año gana el betis",
-  "EL MOVIL NO, EL MOVIL NO!!",
   "Si mi abuela tuviera ruedas seria una bicicleta",
   "La cruzcampo es la mejor cerveza del mundo",
   "El betis es el mejor equipo del mundo",
