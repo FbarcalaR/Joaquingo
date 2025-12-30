@@ -15,7 +15,7 @@ export const allJoaquinSentences: JoaquinSentence[] = [
   "ah yo pense que si, yoPenseQueSi",
   "Alvise perez",
   "el PP no va a pactar con vox",
-  "Alberto cordoba",
+  "Omar Montes",
   "Nivea",
   "Como diria Mario Gil, manager de masas",
   "Pellegrini",
