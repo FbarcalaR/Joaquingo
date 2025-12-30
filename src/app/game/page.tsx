@@ -1,4 +1,4 @@
-'use client';
+"use client";
 
 import { useSearchParams } from "next/navigation";
 import { Suspense, useCallback, useMemo, useState } from "react";
@@ -9,6 +9,8 @@ import {
 
 import styles from "./game.module.css";
 import BingoCell from "@/components/bingo-cell/bingo-cell";
+import Button from "@/components/button/button";
+import { useRouter } from "next/navigation";
 
 const getBingoGrid = (selectedSentences: (JoaquinSentence | undefined)[]) => {
   const matrix: (JoaquinSentence | undefined)[] = Array.from(
@@ -28,6 +30,7 @@ const getBingoGrid = (selectedSentences: (JoaquinSentence | undefined)[]) => {
 };
 
 const Game = () => {
+  const router = useRouter();
   const searchParams = useSearchParams();
   const [announcedSentencesIds, setAnnouncedSentencesIds] = useState<number[]>(
     []
@@ -57,19 +60,28 @@ const Game = () => {
   }, []);
 
   return (
-    <div className={styles.bingoGrid}>
-      {bingoGrid.map((sentence, index) => (
-        <BingoCell
-          key={index}
-          label={sentence?.label}
-          isFiller={!sentence}
-          isSelected={announcedSentencesIds.some(
-            (sentenceId) => sentenceId === sentence?.id
-          )}
-          onClick={() => sentence && toggleSentenceSelection(sentence.id)}
-        />
-      ))}
-    </div>
+    <>
+      <div className={styles.bingoGrid}>
+        {bingoGrid.map((sentence, index) => (
+          <BingoCell
+            key={index}
+            label={sentence?.label}
+            isFiller={!sentence}
+            isSelected={announcedSentencesIds.some(
+              (sentenceId) => sentenceId === sentence?.id
+            )}
+            onClick={() => sentence && toggleSentenceSelection(sentence.id)}
+          />
+        ))}
+      </div>
+
+      <Button
+        variant="primary"
+        onClick={() => router.push(`/select-sentences`)}
+      >
+        Nuevo carton
+      </Button>
+    </>
   );
 };
 
