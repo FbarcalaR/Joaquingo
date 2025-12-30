@@ -10,8 +10,7 @@
 }
 
 .bingoCell.filler {
-    background-color: var(--background);
-    color: #3d3d3d;
+    background-color: #858585;
     cursor: default;
 }
 .bingoCell.selected {
