@@ -28,6 +28,16 @@ const SelectSentences = () => {
     router.push(`/game?selectedIds=${selectedSentenceIds.join(",")}`);
   }, [router, selectedSentenceIds]);
 
+  const setRandomSentencesAndStartGame = useCallback(() => {
+    const shuffled = allSentences
+      .map((sentence) => ({ sentence, sort: Math.random() }))
+      .sort((a, b) => a.sort - b.sort)
+      .map(({ sentence }) => sentence);
+    const randomSentences = shuffled.slice(0, 7).map((sentence) => sentence.id);
+
+    router.push(`/game?selectedIds=${randomSentences.join(",")}`);
+  }, [allSentences, router]);
+
   return (
     <>
       <h1>Que va a decir Joaquin hoy?</h1>
@@ -49,11 +59,23 @@ const SelectSentences = () => {
         ))}
       </div>
       {selectedSentenceIds.length !== 7 && (
-        <span>Aprende a contar. {selectedSentenceIds.length} de 7 frases seleccionadas</span>
+        <span>
+          Aprende a contar. {selectedSentenceIds.length} de 7 frases
+          seleccionadas
+        </span>
       )}
-      <Button variant="primary" onClick={startGame} disabled={selectedSentenceIds.length !== 7}>
-        Jugar
-      </Button>
+      <div className={styles.actionsContainer}>
+        <Button variant="primary" onClick={setRandomSentencesAndStartGame}>
+          Voy a tener suerte
+        </Button>
+        <Button
+          variant="primary"
+          onClick={startGame}
+          disabled={selectedSentenceIds.length !== 7}
+        >
+          Jugar con las frases seleccionadas
+        </Button>
+      </div>
     </>
   );
 };

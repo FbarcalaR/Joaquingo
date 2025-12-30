@@ -10,3 +10,9 @@
 .listContainer .sentenceButton.sentenceSelected {
     opacity: 0.7;
 }
+
+.actionsContainer {
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+}
