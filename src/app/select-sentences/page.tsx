@@ -48,6 +48,9 @@ const SelectSentences = () => {
           </Button>
         ))}
       </div>
+      {selectedSentenceIds.length !== 7 && (
+        <span>Aprende a contar. {selectedSentenceIds.length} de 7 frases seleccionadas</span>
+      )}
       <Button variant="primary" onClick={startGame} disabled={selectedSentenceIds.length !== 7}>
         Jugar
       </Button>
