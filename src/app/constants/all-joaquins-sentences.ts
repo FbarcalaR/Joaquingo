@@ -60,4 +60,8 @@ export const allJoaquinSentences: JoaquinSentence[] = [
   "Silvia Arroyo",
   "Pizza con grillos",
   "Un respeto a Isi Palazon que es el Zidane de Cieza",
+  "Donald Trump",
+  "El agua de Madrid es la mejor",
+  "El wok de Alcorcon, donde me drogaron",
+  "camiseta futbol marca puticlub",
 ].map((label, index) => ({ id: index + 1, label }));
