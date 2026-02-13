@@ -40,6 +40,7 @@ const SelectSentences = () => {
 
   return (
     <>
+      <img src={'https://rlv.zcache.com/hamster_staring_meme_poster-re019676bec69405bb9292746c1fa3b0b_wva_8byvr_644.webp'} />
       <h1>Que va a decir Joaquin hoy?</h1>
       <span>Selecciona tus frases para crear tu carton de bingo</span>
       <span>Selecciona 7 frases</span>
